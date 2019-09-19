@@ -1,5 +1,6 @@
 const CACHE = "pwabuilder-page";
 
+
 const offlineFallbackPage = "offline.html";
 
 self.addEventListener( "install", function( event ) {
