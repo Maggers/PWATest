@@ -1,13 +1,13 @@
 {
     "dir": "ltr",
     "lang": "en",
-    "name": "Pooja's Place",
+    "name": "PWA Test",
     "scope": "/Website/",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": ".",
-    "short_name": "Pooja's Place",
+    "short_name": "PWA Test App",
     "theme_color": "transparent",
-    "description": "",
+    "description": "An application to test the manifest file changes across browsers",
     "orientation": "any",
     "background_color": "transparent",
     "icons" : [
