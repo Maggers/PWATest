@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>PWA Test</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+        <link rel="manifest" href="manifest.json">
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        // This is the "Offline page" service worker
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                    console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+            // Register the service worker
+            navigator.serviceWorker
+                .register("pwabuilder-sw.js", {
+                    scope: "./"
+                })
+                .then(function (reg) {
+                    console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                });
+            }
+        }
+    </script>
+    <body>
+        <div class= "nav_bar">
+            <ul>
+                <li><a href="art.html">Pieces & Paintings</a></li>
+                <li><a href="index.html">Present & Past</a></li>
+            </ul>
+        </div>
+        <div id="intro">
+            <h1>PWA Test</h1>
+            <h5>| Present & Past |</h5>
+        </div>
+        <div id="header1">
+            <h2>Currently,</h2>
+            <p>This page is going to allow users me to configure and test manifest file changes across browsers.</p>
+        </div>
+        <iframe src="frame.html" width="800" height="800"></iframe>
+        <div class="gallery">
+            <a href="images/adventures22.JPG" data-lightbox="mygallery" data-title="Hing Hay Park"><img src= "images/adventures2.jpg"></a>
+            <a href="images/adventures11.JPG" data-lightbox="mygallery" data-title="Seattle Art Museum"><img src= "images/adventures.JPG"></a>
+            <a href="images/adventures33.JPG" data-lightbox="mygallery" data-title="Paramount Theatre"><img src= "images/adventures3.jpg"></a>
+        </div>
+        <div id="header2">
+            <h2>In the past two years,</h2>
+            <ul style="list-style-type:circle;">
+                <li>PWAs have evolved a lot </li>
+                <li>More and more capabilities are coming to the web platform</li>
+                <li>Manifest file changes are going to be important to enable more control over apps look and feel</li>
+                <li>PWAs will be available on many platforms</li>
+            </ul>
+        </div>
+        <div class= "nav_bar2">
+            <ul>
+                <li><a href="https://www.theage.com.au">The Age</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
