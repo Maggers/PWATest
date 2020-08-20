@@ -6,7 +6,6 @@
     "display": "fullscreen",
     "start_url": ".",
     "short_name": "PWA Test App",
-    "theme_color": "transparent",
     "description": "An application to test the manifest file changes across browsers",
     "orientation": "any",
     "background_color": "transparent",
